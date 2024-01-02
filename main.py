@@ -43,3 +43,4 @@ if __name__ == '__main__':
     Jerry.run(Jerry, 6)
     Jerry.eat(Tom)
     print('Кот теперь весит', Jerry.wight)
+    # тут будет какая-то фигня
