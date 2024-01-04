@@ -10,12 +10,11 @@ class Cat:
 
     def eat(self, what):
         print(f'{name_cat} кричит: Я жрат {what.name}')
-        self.wight +=wight2_mouse
+        self.wight += wight2_mouse
 
     @staticmethod
-    def run(self, speed):
+    def run(speed):
         print(f'Кот догоняет со скоростью {speed}')
-
 
 
 class Mouse:
@@ -25,12 +24,13 @@ class Mouse:
         self.name = name_mouse
 
     @staticmethod
-    def say(self):
+    def say():
         print('Пи-пи-пи')
 
     @staticmethod
-    def run(self, speed):
+    def run(speed):
         print(f'Мышь убегает со скоростью {speed}')
+
 
 class Dog:
     def __init__(self, name_dog, color_dog, wight_dog):
@@ -41,12 +41,16 @@ class Dog:
     @staticmethod
     def say():
         print('Гав,Гав!!!Кот, если ты сьешь мышь, я тебя догоню и сьем!!!!!')
-    def run(self, speed):
+
+    @staticmethod
+    def run(speed):
         print(f'Собака догоняет кота со скоростью {speed}')
+
     def eat(self, what):
         print(f'Собачка говорит: Упс, ням, я же предупреждал тебя, Кот! {what.name}!')
-        self.wight +=wight1_cat
-        self.wight+=wight2_mouse
+        self.wight += wight1_cat
+        self.wight += wight2_mouse
+
 
 if __name__ == '__main__':
     name_cat = input('Введите имя кота: ')
@@ -56,19 +60,17 @@ if __name__ == '__main__':
     wight2_mouse = int(input('Введите вес мыши: '))
     wight3_dog = int(input('Введите вес собачки: '))
     Tom = Cat(name_cat, 'Black & Wight', 5)
-    Jerry= Mouse(name_mouse, 'Gray', 2)
+    Jerry = Mouse(name_mouse, 'Gray', 2)
     Pluto = Dog(name_mouse, 'white', 8)
 
-
     Tom.say()
-    Jerry.say(Tom)
+    Jerry.say()
     Pluto.say()
-    Tom.run(Tom, 5)
-    Jerry.run(Jerry, 6)
+    Tom.run(5)
+    Jerry.run(6)
     Pluto.run(10)
     Tom.eat(Jerry)
     Pluto.eat(Tom)
     print(f'Собачка теперь весит {Pluto.wight})))')
     print(f'Котик бы весил {Tom.wight} (((')
     print(f'Вот и сказочки конец, а кто слушал МОЛОДЕЦ!!!!!')
-
